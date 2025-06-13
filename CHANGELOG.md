@@ -1,3 +1,7 @@
+## 3.1.0
+fork 版本改进了在新版中需要处理namespace 等问题
+The fork version has improved issues such as namespace that need to be handled in the new version
+
 ## 2.1.0
 
 * Support low version Android installation (tested 5, 6, 7, 8, 9, 10, 11, 12, 13, the version lower than 5 has not been tested, if there is any problem, please report to me)

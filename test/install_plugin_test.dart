@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:install_plugin/install_plugin.dart';
+import 'package:install_plugin_v3/install_plugin_v3.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -21,13 +21,14 @@ void main() {
     response = 'Success';
     final fakePath = 'fake.apk';
     final fakeAppId = 'com.example.install';
-    final dynamic result =
-        await InstallPlugin.install(fakePath, appId: fakeAppId);
+    final dynamic result = await InstallPlugin.install(fakePath, appId: fakeAppId);
     expect(
       log,
       <Matcher>[
-        isMethodCall('install',
-            arguments: {'filePathOrUrlString': fakePath, 'appId': fakeAppId})
+        isMethodCall('install', arguments: {
+          'filePathOrUrlString': fakePath,
+          'appId': fakeAppId
+        })
       ],
     );
     expect(result, response);
@@ -40,7 +41,9 @@ void main() {
     expect(
       log,
       <Matcher>[
-        isMethodCall('install', arguments: {'filePathOrUrlString': fakeUrl})
+        isMethodCall('install', arguments: {
+          'filePathOrUrlString': fakeUrl
+        })
       ],
     );
     expect(result, response);
@@ -50,13 +53,14 @@ void main() {
     response = 'Success';
     final fakePath = 'fake.apk';
     final fakeAppId = 'com.example.install';
-    final dynamic result =
-        await InstallPlugin.installApk(fakePath, appId: fakeAppId);
+    final dynamic result = await InstallPlugin.installApk(fakePath, appId: fakeAppId);
     expect(
       log,
       <Matcher>[
-        isMethodCall('installApk',
-            arguments: {'filePath': fakePath, 'appId': fakeAppId})
+        isMethodCall('installApk', arguments: {
+          'filePath': fakePath,
+          'appId': fakeAppId
+        })
       ],
     );
     expect(result, response);
@@ -69,7 +73,9 @@ void main() {
     expect(
       log,
       <Matcher>[
-        isMethodCall('gotoAppStore', arguments: {'urlString': fakeUrl})
+        isMethodCall('gotoAppStore', arguments: {
+          'urlString': fakeUrl
+        })
       ],
     );
     expect(result, isNull);

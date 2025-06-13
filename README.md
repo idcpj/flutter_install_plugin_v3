@@ -1,3 +1,9 @@
+## 前言
+fork 版本改进了在新版中需要处理namespace 等问题
+## Preface
+The fork version has improved issues such as namespace that need to be handled in the new version
+---
+
 # install_plugin
 
 [![Build Status](https://travis-ci.org/hui-z/flutter_install_plugin.svg?branch=master)](https://travis-ci.org/hui-z/flutter_install_plugin#)
@@ -11,7 +17,7 @@ We use the `install_plugin` plugin to install apk for android; and using url to 
 To use this plugin, add `install_plugin` as a dependency in your pubspec.yaml file. For example:
 ```yaml
 dependencies:
-  install_plugin: '^2.1.0'
+  install_plugin_v3: '^3.1.0'
 ```
 
 ## iOS
